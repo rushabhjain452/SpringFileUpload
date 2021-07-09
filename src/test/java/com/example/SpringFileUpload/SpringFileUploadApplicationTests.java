@@ -8,6 +8,7 @@ class SpringFileUploadApplicationTests {
 
 	@Test
 	void contextLoads() {
+		System.out.println("Test cases executing...");
 	}
 
 }

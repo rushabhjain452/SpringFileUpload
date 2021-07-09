@@ -40,6 +40,7 @@ public class FileUploadController {
             }
             else {
                 // File Upload
+//                multipartFile.transferTo();
                 boolean result = fileUploadHelper.uploadFile(multipartFile);
                 if(result){
 //                    return ResponseEntity.ok("File is successfully uploaded");

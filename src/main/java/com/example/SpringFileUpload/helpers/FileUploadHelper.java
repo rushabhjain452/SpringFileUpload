@@ -43,7 +43,10 @@ public class FileUploadHelper {
 
 //            Using NIO Package
 //            public static long copy(InputStream in, Path target, CopyOption... options)
-            Files.copy(multipartFile.getInputStream(), Paths.get(UPLOAD_DIR + File.separator + multipartFile.getOriginalFilename()), StandardCopyOption.REPLACE_EXISTING);
+//            Files.copy(multipartFile.getInputStream(), Paths.get(UPLOAD_DIR + File.separator + multipartFile.getOriginalFilename()), StandardCopyOption.REPLACE_EXISTING);
+
+            // Using "transferTo" method of MultipartFile
+            multipartFile.transferTo(new File(UPLOAD_DIR + File.separator + multipartFile.getOriginalFilename()));
 
             // Set uploaded to true
             isUploaded = true;
